@@ -10,6 +10,5 @@ mhelkeyappfolio/hackfolio2021-face-app:alpha-0.1
 
 ## Start up (DOCKER ONLY: WILL BE DEPRACATED)
 
-`docker start mhelkeyappfolio/hackfolio2021-face-app:latest`
+`docker run --name opencv -p 42069:42069 -td mhelkeyappfolio/hackfolio2021-face-app:[ make sure to put latest tag here]`
 
-`docker run --name sql-db -e MYSQL_ROOT_PASSWORD_FILE=/secrets/mysql-root -d mysql:latest`
