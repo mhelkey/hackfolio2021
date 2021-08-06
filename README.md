@@ -28,7 +28,9 @@
 # Tech Stack
 #### OpenCV and Python docker image taken from jjanzic/docker-python3-opencv:opencv-4.1.0.
 #### Added Flask and MatPlotLib libraries to image, creating a new Docker image
-#### Added trained classifier and program to detect faces from images, and packaged everything into a webserver
+#### Added trained classifier from OpenCV
+#### Wrote program to detect faces from images, and draw hats on heads
+#### Packaged everything into a webserver
 
 #
 # Docker 
