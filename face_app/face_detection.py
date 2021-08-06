@@ -25,12 +25,12 @@ def draw_mustache(filename):
   
      # Draw rectangle around the faces
     for (x, y, w, h) in faces:
-        cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
-        x_offset = x+w
-        y_offset = y+h
-        hat = cv2.resize(temp[0], (x_offset,y_offset))
-        colored = cv2.cvtColor(hat, cv2.COLOR_GRAY2RGB)
-        img[y_offset:y_offset+colored.shape[0], x_offset:x_offset+colored.shape[1]] = colored
+        cv2.rectangle(img, (x, y), (x+w, y+h), (255, 255, 255), -1)
+        #x_offset = w
+        #y_offset = h
+        #hat = cv2.resize(temp[0], (x_offset,y_offset))
+        #colored = cv2.cvtColor(hat, cv2.COLOR_GRAY2RGB)
+        #img[y_offset:y_offset+colored.shape[0], x_offset:x_offset+colored.shape[1]] = colored
    # Display the output
     RGB_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     plt.imshow(RGB_img,cmap=None,  interpolation = 'bicubic')
