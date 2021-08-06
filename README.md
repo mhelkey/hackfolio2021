@@ -3,12 +3,13 @@
 - [Tech-Stack](#tech-stack)
 - [Docker-Info](#docker)
 - [Building-and-Testing](#building-and-testing)
+- [Breakdown](#breakdown)
 
 
 #
 # Overview
 #### This is my project for the 2021 Appfolio Hackathon, and it is a Python web app to detect faces in an image, and draw a hat with the Appfolio name on the heads of detected faces.
-####
+###
 #### It uses a trained OpenCV Haar Cascade face classifier to identify where faces are in a photo, and uses OpenCV's rectangle and text tools to draw a rudimentary hat on top of the faces.
 ####  
 #### The project is locally hosted on a Flask webserver inside of a Docker container, which also contains the OpenCV libraries for face detection, and matplotlib libraries for image display and matrix manipulation
@@ -58,3 +59,14 @@ docker exec -it opencv bash
 python main.py
 ```
 #### Now go to your browser, and go to http://localhost:42069/ and upload a photo and test this project out for yourself!
+
+#
+# Breakdown
+#### Stop docker container
+```
+docker stop opencv
+```
+#### Remove docker image
+```
+docker rm opencv
+```
