@@ -32,10 +32,11 @@ def draw_mustache(filename):
             delta_y =int (  y - (h/12))
         cv2.rectangle(img, (x, y), (x+w, delta_y), (0,0,0), -1)
         if (y - (h/3)) < 0:
-            delta_y = 0
+            delta_y2 = 0
         else:
-            delta_y =int( y - (h/3))
-        cv2.rectangle(img, (x+20, y), (x+w-20, delta_y), (0,0,0), -1)
+            delta_y2 =int( y - (h/3))
+        cv2.rectangle(img, (x+20, y), (x+w-20, delta_y2), (0,0,0), -1)
+        cv2.putText(img,'Appfolio', (x+int(.25 * w), delta_y), cv2.FONT_HERSHEY_SIMPLEX, 2, (255,255,255), 2, cv2.LINE_AA) 
    # Display the output
     RGB_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     plt.imshow(RGB_img,cmap=None,  interpolation = 'bicubic')
